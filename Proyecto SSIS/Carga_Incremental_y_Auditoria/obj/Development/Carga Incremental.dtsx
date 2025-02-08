@@ -1,0 +1,2139 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/6/2025 12:24:23 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MAX"
+  DTS:CreatorName="MAX\MAX"
+  DTS:DTSID="{F7F1EF1E-C54F-4F82-BCE4-C5CAD39782A7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Carga Incremental"
+  DTS:PackageType="5"
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{C10DE2A0-07CF-4866-AA8B-479CCF1838D9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV Ventas]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C9BC2BB2-5D4C-4713-B104-649D7FD6C0C6}"
+      DTS:ObjectName="CSV Ventas">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\2. PORTAFOLIO-MAXIMO-SILVA\SQL Server Integration Services (SSIS)\CARGA INCREMENTAL DE DATOS\Dataset\Sample - Superstore.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Row ID"
+              DTS:DTSID="{74F95674-3622-400D-A324-CB080C80CE6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order ID"
+              DTS:DTSID="{74EFBE83-89CA-46A9-AAC4-B60D5BE78D4F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order Date"
+              DTS:DTSID="{15697AD7-09C2-480F-80FC-9AFC35CEB573}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ship Date"
+              DTS:DTSID="{AF32D7F9-2CBE-4F28-99AF-2BF73A8D6F32}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ship Mode"
+              DTS:DTSID="{4BBB4949-D9F9-4CC0-A1FA-84843CB77B6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer ID"
+              DTS:DTSID="{E376644D-C156-4C87-8A18-842F1A8D12E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Name"
+              DTS:DTSID="{70D0C8FF-0286-4CD6-BF50-B069980C2981}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Segment"
+              DTS:DTSID="{17E5271F-92D7-4867-BE86-9ED421CA1329}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{57E3785E-6213-4750-9E69-3ADF77E5489C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{C660E0A2-3E87-4E1D-92BA-E789BD658A38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{3429027F-C3A3-48F3-A324-91AA310F5BEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Postal Code"
+              DTS:DTSID="{AFB37A27-B963-4803-89AD-F2D4276425A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{2734BB6C-37D1-4841-83DF-BCB6B9A2D688}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product ID"
+              DTS:DTSID="{67E12F1E-6DEE-4E0C-882A-295D043F720B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{AECE245C-4F5A-4FED-83DC-90796000D1AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sub-Category"
+              DTS:DTSID="{C9590F3A-DD47-455B-824A-56857FF68240}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product Name"
+              DTS:DTSID="{9B6D290E-E962-43E8-B3BA-424472572259}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales"
+              DTS:DTSID="{39456330-19BC-401C-92DC-12702501C48B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{FB34DE00-D025-4F2D-9AD3-D1340437A1E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="5"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Discount"
+              DTS:DTSID="{1A6617AF-59D6-4944-A012-73AD6BB689BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Profit"
+              DTS:DTSID="{609D7978-EC79-448C-840C-F1929D02424E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MAX\MSSQLSERVER2022.CARGA_INCREMENTAL.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5B0D65BF-7BEB-450A-A803-8E9282C62AE0}"
+      DTS:ObjectName="MAX\MSSQLSERVER2022.CARGA_INCREMENTAL.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MAX\MSSQLSERVER2022;User ID=sa;Initial Catalog=CARGA_INCREMENTAL;Provider=SQLNCLI11.1;Application Name=SSIS-Carga Incremental-{5B0D65BF-7BEB-450A-A803-8E9282C62AE0}MAX\MSSQLSERVER2022.CARGA_INCREMENTAL.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJ3YNkaA7v0erw9zfXIJgggAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACsnyhpoTa41oBg3mV3t4wmiSCCXGtOw8ShtTTqikBt+QAAAAAOgAAAAAIAACAAAACr+CMnocmmIQbLLJAeckjcjwJIrQXC4fhGaCF3qDbtfyAAAACZfuzmki9+MVkJat44Pl+T3tZLNncSDXGT1UIpPvGiOkAAAAC5Uv4YuFE/W9cOQr3lp/NxngkHWNImemts9mM+aaQr4mHbAqmrFC6/4KlHbxjg421YvmkHLvLLkYmCgwzy/XjZ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\BD Ventas_Origen"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6FD77CD9-3DD2-4347-84D8-D0C025C5E867}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="BD Ventas_Origen"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\BD Ventas_Origen\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Row ID]"
+                      cachedDataType="i4"
+                      cachedName="Row ID"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Row ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Order ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Order ID"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Order Date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Order Date"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order Date]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Ship Date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Ship Date"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Date]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Ship Mode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ship Mode"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Mode]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Customer ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Customer ID"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Customer Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Customer Name"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer Name]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Segment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Segment"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Segment]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="City"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="State"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Postal Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Postal Code"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Postal Code]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Region"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Sub-Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sub-Category"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sub-Category]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Product Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Product Name"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product Name]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Sales]"
+                      cachedDataType="numeric"
+                      cachedName="Sales"
+                      cachedPrecision="18"
+                      cachedScale="4"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sales]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Discount]"
+                      cachedDataType="numeric"
+                      cachedName="Discount"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Discount]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input].Columns[Profit]"
+                      cachedDataType="numeric"
+                      cachedName="Profit"
+                      cachedPrecision="18"
+                      cachedScale="4"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Profit]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Row ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Row ID]"
+                      name="Copy of Row ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Row ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
+                      name="Copy of Order ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order Date]"
+                      name="Copy of Order Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order Date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Date]"
+                      name="Copy of Ship Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]"
+                      name="Copy of Ship Mode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Mode]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]"
+                      name="Copy of Customer ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]"
+                      name="Copy of Customer Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]"
+                      name="Copy of Segment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Segment]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                      name="Copy of Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Country]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      name="Copy of City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[City]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                      name="Copy of State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[State]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postal Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postal Code]"
+                      name="Copy of Postal Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Postal Code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
+                      name="Copy of Region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Region]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]"
+                      name="Copy of Product ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
+                      name="Copy of Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]"
+                      name="Copy of Sub-Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sub-Category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product Name]"
+                      name="Copy of Product Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sales]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sales]"
+                      name="Copy of Sales"
+                      precision="18"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sales]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Quantity]"
+                      name="Copy of Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Quantity]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Discount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Discount]"
+                      name="Copy of Discount"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Discount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Profit]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Profit]"
+                      name="Copy of Profit"
+                      precision="18"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Profit]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\BD Ventas_Origen\Destination Ventas_Origen"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination Ventas_Origen"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Ventas_Origen]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MAX\MSSQLSERVER2022.CARGA_INCREMENTAL.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[MAX\MSSQLSERVER2022.CARGA_INCREMENTAL.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Row ID]"
+                      cachedDataType="i4"
+                      cachedName="Copy of Row ID"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Row_ID]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Row ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Order ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Order ID"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Order_ID]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Order Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Copy of Order Date"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Order_Date]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order Date]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Ship Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Copy of Ship Date"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Ship_Date]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Date]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Ship Mode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Ship Mode"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Ship_Mode]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ship Mode]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Customer ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Customer ID"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Customer Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Copy of Customer Name"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Customer Name]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Segment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Segment"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Segment]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Segment]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Country"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Copy of City"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Copy of State"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Postal Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Postal Code"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Postal_Code]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postal Code]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Region"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Product ID"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Product_ID]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product ID]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Category"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Sub-Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Sub-Category"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Sub_Category]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sub-Category]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Sales]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of Sales"
+                      cachedPrecision="18"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sales]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Product Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Product Name"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Product_Name]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Product Name]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Copy of Quantity"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Quantity]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Discount]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of Discount"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Discount]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Discount]" />
+                    <inputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].Columns[Copy of Profit]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of Profit"
+                      cachedPrecision="18"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Profit]"
+                      lineageId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Profit]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Row_ID]"
+                      dataType="i4"
+                      name="Row_ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Order_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Order_ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Order_Date]"
+                      dataType="dbDate"
+                      name="Order_Date" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Ship_Date]"
+                      dataType="dbDate"
+                      name="Ship_Date" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Ship_Mode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ship_Mode" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Segment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Postal_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Postal_Code" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Product_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Product_ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Sub_Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sub_Category" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Product_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Product_Name" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      dataType="numeric"
+                      name="Sales"
+                      precision="18"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Discount]"
+                      dataType="numeric"
+                      name="Discount"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Profit]"
+                      dataType="numeric"
+                      name="Profit"
+                      precision="18"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input].ExternalColumns[Date_Insert]"
+                      dataType="dbTimeStamp"
+                      name="Date_Insert" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\BD Ventas_Origen\Destination Ventas_Origen.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Destination Ventas_Origen.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\BD Ventas_Origen\Destination Ventas_Origen.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\BD Ventas_Origen\Source CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2058"
+              name="Source CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\BD Ventas_Origen\Source CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CSV Ventas]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV Ventas]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Row ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Row ID]"
+                      name="Row ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order ID]"
+                      name="Order ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order Date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Order Date]"
+                      name="Order Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      name="Ship Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Mode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Ship Mode]"
+                      name="Ship Mode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer ID]"
+                      name="Customer ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      length="100"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      name="Customer Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Segment]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Segment]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Segment]"
+                      name="Segment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      length="100"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      length="100"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Postal Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Postal Code]"
+                      name="Postal Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product ID]"
+                      name="Product ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sub-Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
+                      length="50"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sub-Category]"
+                      name="Sub-Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
+                      length="255"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Product Name]"
+                      name="Product Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sales]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Sales]"
+                      name="Sales"
+                      precision="18"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Discount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Discount]"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Discount]"
+                      name="Discount"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Profit]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Profit]"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].Columns[Profit]"
+                      name="Profit"
+                      precision="18"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
+                      dataType="i4"
+                      name="Row ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      dataType="wstr"
+                      length="50"
+                      name="Order Date" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      dataType="wstr"
+                      length="50"
+                      name="Ship Date" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ship Mode" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Customer ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Customer Name" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Segment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Postal Code" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Product ID" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sub-Category" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Product Name" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                      dataType="numeric"
+                      name="Sales"
+                      precision="18"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Discount]"
+                      dataType="numeric"
+                      name="Discount"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output].ExternalColumns[Profit]"
+                      dataType="numeric"
+                      name="Profit"
+                      precision="18"
+                      scale="4" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\BD Ventas_Origen.Paths[Data Conversion Output]"
+              endId="Package\BD Ventas_Origen\Destination Ventas_Origen.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\BD Ventas_Origen\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\BD Ventas_Origen.Paths[Flat File Source Output]"
+              endId="Package\BD Ventas_Origen\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\BD Ventas_Origen\Source CSV.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Incremental load and Audit"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{CC7FB8CC-BAEA-44DE-8449-CC355BD13ED3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Incremental load and Audit"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5B0D65BF-7BEB-450A-A803-8E9282C62AE0}"
+          SQLTask:SqlStatementSource="-- 1. Declaración de la tabla variable para almacenar los registros de auditoría&#xA;DECLARE @TempAuditoria TABLE (&#xA;    Row_ID INT,                           -- Identificador de la fila&#xA;    Order_ID VARCHAR(50),                 -- Identificador de la orden&#xA;    Fecha_Actualizacion DATETIME,         -- Fecha y hora en que se actualiza el registro&#xA;    Columnas_Modificadas VARCHAR(255),    -- Columnas que han sido modificadas&#xA;    Valores_Anteriores NVARCHAR(MAX)      -- Valores anteriores de las columnas modificadas&#xA;);&#xA;&#xA;-- 2️. Guardar en la variable de tabla los registros que han cambiado&#xA;INSERT INTO @TempAuditoria (Row_ID, Order_ID, Fecha_Actualizacion, Columnas_Modificadas, Valores_Anteriores)&#xA;SELECT &#xA;    target.Row_ID,&#xA;    target.Order_ID,&#xA;    GETDATE() AS Fecha_Actualizacion,&#xA;    STRING_AGG(CASE  &#xA;        WHEN target.Order_Date &lt;&gt; source.Order_Date THEN 'Order_Date' &#xA;        WHEN target.Ship_Date &lt;&gt; source.Ship_Date THEN 'Ship_Date' &#xA;        WHEN target.Ship_Mode &lt;&gt; source.Ship_Mode THEN 'Ship_Mode' &#xA;        WHEN target.Customer_ID &lt;&gt; source.Customer_ID THEN 'Customer_ID' &#xA;        WHEN target.Customer_Name &lt;&gt; source.Customer_Name THEN 'Customer_Name' &#xA;        WHEN target.Segment &lt;&gt; source.Segment THEN 'Segment' &#xA;        WHEN target.Country &lt;&gt; source.Country THEN 'Country' &#xA;        WHEN target.City &lt;&gt; source.City THEN 'City' &#xA;        WHEN target.State &lt;&gt; source.State THEN 'State' &#xA;        WHEN target.Postal_Code &lt;&gt; source.Postal_Code THEN 'Postal_Code' &#xA;        WHEN target.Region &lt;&gt; source.Region THEN 'Region' &#xA;        WHEN target.Product_ID &lt;&gt; source.Product_ID THEN 'Product_ID' &#xA;        WHEN target.Category &lt;&gt; source.Category THEN 'Category' &#xA;        WHEN target.Sub_Category &lt;&gt; source.Sub_Category THEN 'Sub_Category' &#xA;        WHEN target.Product_Name &lt;&gt; source.Product_Name THEN 'Product_Name' &#xA;        WHEN target.Sales &lt;&gt; source.Sales THEN 'Sales' &#xA;        WHEN target.Quantity &lt;&gt; source.Quantity THEN 'Quantity' &#xA;        WHEN target.Discount &lt;&gt; source.Discount THEN 'Discount' &#xA;        WHEN target.Profit &lt;&gt; source.Profit THEN 'Profit' &#xA;    END, ', ') AS Columnas_Modificadas,  -- Se concatena (separado por comas) los nombres de las columnas que han cambiado.       &#xA;    STRING_AGG(CASE  &#xA;        WHEN target.Order_Date &lt;&gt; source.Order_Date THEN 'Order_Date: ' + CAST(target.Order_Date AS NVARCHAR) &#xA;        WHEN target.Ship_Date &lt;&gt; source.Ship_Date THEN 'Ship_Date: ' + CAST(target.Ship_Date AS NVARCHAR) &#xA;        WHEN target.Ship_Mode &lt;&gt; source.Ship_Mode THEN 'Ship_Mode: ' + target.Ship_Mode &#xA;        WHEN target.Customer_ID &lt;&gt; source.Customer_ID THEN 'Customer_ID: ' + target.Customer_ID &#xA;        WHEN target.Customer_Name &lt;&gt; source.Customer_Name THEN 'Customer_Name: ' + target.Customer_Name &#xA;        WHEN target.Segment &lt;&gt; source.Segment THEN 'Segment: ' + target.Segment &#xA;        WHEN target.Country &lt;&gt; source.Country THEN 'Country: ' + target.Country &#xA;        WHEN target.City &lt;&gt; source.City THEN 'City: ' + target.City &#xA;        WHEN target.State &lt;&gt; source.State THEN 'State: ' + target.State &#xA;        WHEN target.Postal_Code &lt;&gt; source.Postal_Code THEN 'Postal_Code: ' + target.Postal_Code &#xA;        WHEN target.Region &lt;&gt; source.Region THEN 'Region: ' + target.Region &#xA;        WHEN target.Product_ID &lt;&gt; source.Product_ID THEN 'Product_ID: ' + target.Product_ID &#xA;        WHEN target.Category &lt;&gt; source.Category THEN 'Category: ' + target.Category &#xA;        WHEN target.Sub_Category &lt;&gt; source.Sub_Category THEN 'Sub_Category: ' + target.Sub_Category &#xA;        WHEN target.Product_Name &lt;&gt; source.Product_Name THEN 'Product_Name: ' + target.Product_Name &#xA;        WHEN target.Sales &lt;&gt; source.Sales THEN 'Sales: ' + CAST(target.Sales AS NVARCHAR) &#xA;        WHEN target.Quantity &lt;&gt; source.Quantity THEN 'Quantity: ' + CAST(target.Quantity AS NVARCHAR) &#xA;        WHEN target.Discount &lt;&gt; source.Discount THEN 'Discount: ' + CAST(target.Discount AS NVARCHAR) &#xA;        WHEN target.Profit &lt;&gt; source.Profit THEN 'Profit: ' + CAST(target.Profit AS NVARCHAR) &#xA;    END, '; ') AS Valores_Anteriores  -- Se concatena (separado por punto y coma) el nombre de la columna y su valor anterior&#xA;FROM Ventas_Destino AS target&#xA;JOIN Ventas_Origen AS source&#xA;    ON target.Row_ID = source.Row_ID&#xA;WHERE  &#xA;        target.Order_Date &lt;&gt; source.Order_Date OR&#xA;        target.Ship_Date &lt;&gt; source.Ship_Date OR&#xA;        target.Ship_Mode &lt;&gt; source.Ship_Mode OR&#xA;        target.Customer_ID &lt;&gt; source.Customer_ID OR&#xA;        target.Customer_Name &lt;&gt; source.Customer_Name OR&#xA;        target.Segment &lt;&gt; source.Segment OR&#xA;        target.Country &lt;&gt; source.Country OR&#xA;        target.City &lt;&gt; source.City OR&#xA;        target.State &lt;&gt; source.State OR&#xA;        target.Postal_Code &lt;&gt; source.Postal_Code OR&#xA;        target.Region &lt;&gt; source.Region OR&#xA;        target.Product_ID &lt;&gt; source.Product_ID OR&#xA;        target.Category &lt;&gt; source.Category OR&#xA;        target.Sub_Category &lt;&gt; source.Sub_Category OR&#xA;        target.Product_Name &lt;&gt; source.Product_Name OR&#xA;        target.Sales &lt;&gt; source.Sales OR&#xA;        target.Quantity &lt;&gt; source.Quantity OR&#xA;        target.Discount &lt;&gt; source.Discount OR&#xA;        target.Profit &lt;&gt; source.Profit  &#xA;       -- Se filtran los registros donde al menos una columna esta diferente entre origen y destino&#xA;GROUP BY target.Row_ID, target.Order_ID;&#xA;&#xA;-- 3. Se inserta los cambios en la tabla de auditoría usando la variable de tabla&#xA;INSERT INTO Ventas_Auditoria (Row_ID, Order_ID, Fecha_Actualizacion, Columnas_Modificadas, Valores_Anteriores)&#xA;SELECT * FROM @TempAuditoria;  -- Se transfiere los registros auditados a la tabla física Ventas_Auditoria&#xA;&#xA;-- 4️. Se realiza la actualización en Ventas_Destino usando MERGE&#xA;MERGE INTO Ventas_Destino AS target&#xA;USING Ventas_Origen AS source&#xA;ON target.Row_ID = source.Row_ID&#xA;&#xA;--Cuando se encuentra un registro en ambas tablas (MATCHED) y existe al menos una diferencia en alguno de los campos especificados, se ejecuta la cláusula UPDATE.&#xA;WHEN MATCHED AND (  &#xA;    target.Order_Date &lt;&gt; source.Order_Date OR&#xA;    target.Ship_Date &lt;&gt; source.Ship_Date OR&#xA;    target.Ship_Mode &lt;&gt; source.Ship_Mode OR&#xA;    target.Customer_ID &lt;&gt; source.Customer_ID OR&#xA;    target.Customer_Name &lt;&gt; source.Customer_Name OR&#xA;    target.Segment &lt;&gt; source.Segment OR&#xA;    target.Country &lt;&gt; source.Country OR&#xA;    target.City &lt;&gt; source.City OR&#xA;    target.State &lt;&gt; source.State OR&#xA;    target.Postal_Code &lt;&gt; source.Postal_Code OR&#xA;    target.Region &lt;&gt; source.Region OR&#xA;    target.Product_ID &lt;&gt; source.Product_ID OR&#xA;    target.Category &lt;&gt; source.Category OR&#xA;    target.Sub_Category &lt;&gt; source.Sub_Category OR&#xA;    target.Product_Name &lt;&gt; source.Product_Name OR&#xA;    target.Sales &lt;&gt; source.Sales OR&#xA;    target.Quantity &lt;&gt; source.Quantity OR&#xA;    target.Discount &lt;&gt; source.Discount OR&#xA;    target.Profit &lt;&gt; source.Profit&#xA;)  &#xA;THEN  &#xA;UPDATE SET  --Se actualizan los registros&#xA;    target.Order_Date = source.Order_Date,&#xA;    target.Ship_Date = source.Ship_Date,&#xA;    target.Ship_Mode = source.Ship_Mode,&#xA;    target.Customer_ID = source.Customer_ID,&#xA;    target.Customer_Name = source.Customer_Name,&#xA;    target.Segment = source.Segment,&#xA;    target.Country = source.Country,&#xA;    target.City = source.City,&#xA;    target.State = source.State,&#xA;    target.Postal_Code = source.Postal_Code,&#xA;    target.Region = source.Region,&#xA;    target.Product_ID = source.Product_ID,&#xA;    target.Category = source.Category,&#xA;    target.Sub_Category = source.Sub_Category,&#xA;    target.Product_Name = source.Product_Name,&#xA;    target.Sales = source.Sales,&#xA;    target.Quantity = source.Quantity,&#xA;    target.Discount = source.Discount,&#xA;    target.Profit = source.Profit&#xA;&#xA;-- 5. Se inserta los datos nuevos si no existen en la tabla destino&#xA;&#xA;WHEN NOT MATCHED THEN  &#xA;INSERT (Row_ID, Order_ID, Order_Date, Ship_Date, Ship_Mode, Customer_ID, Customer_Name,  &#xA;        Segment, Country, City, State, Postal_Code, Region, Product_ID,  &#xA;        Category, Sub_Category, Product_Name, Sales, Quantity, Discount, Profit, Date_Insert)  &#xA;VALUES (source.Row_ID, source.Order_ID, source.Order_Date, source.Ship_Date, source.Ship_Mode, source.Customer_ID, source.Customer_Name,  &#xA;        source.Segment, source.Country, source.City, source.State, source.Postal_Code, source.Region, source.Product_ID,  &#xA;        source.Category, source.Sub_Category, source.Product_Name, source.Sales, source.Quantity, source.Discount, source.Profit, source.Date_Insert);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Table Ventas_Origen"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{c439907e-0f3d-4621-9bd5-5e0ae2ebe6e0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Table Ventas_Origen"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5B0D65BF-7BEB-450A-A803-8E9282C62AE0}"
+          SQLTask:SqlStatementSource="Truncate Table Ventas_Origen" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{9024C590-B2A6-4270-885A-9B9FF6A3D45E}"
+      DTS:From="Package\BD Ventas_Origen"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Incremental load and Audit" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{86CCC4DC-C979-4F8A-B816-7C6F4B36837F}"
+      DTS:From="Package\Truncate Table Ventas_Origen"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\BD Ventas_Origen" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="165,42"
+          Id="Package\BD Ventas_Origen"
+          TopLeft="169,130" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Incremental load and Audit"
+          TopLeft="148,220" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="251.5,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Truncate Table Ventas_Origen"
+          TopLeft="138,43" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="250.25,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\BD Ventas_Origen">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\BD Ventas_Origen\Source CSV"
+          TopLeft="119,11" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\BD Ventas_Origen\Data Conversion"
+          TopLeft="105,85" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\BD Ventas_Origen\Destination Ventas_Origen"
+          TopLeft="84,158" />
+        <EdgeLayout
+          Id="Package\BD Ventas_Origen.Paths[Flat File Source Output]"
+          TopLeft="184.25,53">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\BD Ventas_Origen.Paths[Data Conversion Output]"
+          TopLeft="184.5,127">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
